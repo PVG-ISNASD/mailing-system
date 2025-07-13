@@ -78,7 +78,7 @@ for recipient in recipients:
         <p style="font-size: 16px;">This symposium will serve as a platform for global experts, researchers, and academicians to share insights, engage in 
         meaningful discussions, and showcase innovations contributing to a sustainable future.</p>
 
-        <h3 style="color: #d32f2f; font-weight: 700; font-size: 22px;">📢 Call for Papers</h3>
+        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">📢 Call for Papers</h3>
         <p style="font-size: 16px;">We invite original research papers, case studies, and review articles on a wide range of sustainability-related themes.</p>
         <p style="font-size: 16px;"><strong>Poster Presentation Competition</strong> is also open to students from Classes 8 to 12, with awards and opportunities for selected posters to be presented during the main symposium.</p>
 
