@@ -65,47 +65,61 @@ for recipient in recipients:
       <meta charset="UTF-8">
       <title>{subject}</title>
     </head>
-    <body style="font-family: Arial, sans-serif; line-height: 1.6;">
-      <p>Dear Sir/Ma’am,</p>
+    <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
+      <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        
+        <p style="font-size: 16px;">Dear Sir/Ma’am,</p>
 
-      <p>We are pleased to invite faculty members and students from your esteemed institution to be a part of the upcoming 
-      <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, organized by 
-      <strong>Pune Vidyarthi Griha’s College of Engineering and Technology & G. K. Pate (Wani) Institute of Management, Pune-9</strong>, 
-      affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
+        <p style="font-size: 16px;">We are pleased to invite faculty members and students from your esteemed institution to be a part of the upcoming 
+        <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, organized by 
+        <strong>Pune Vidyarthi Griha’s College of Engineering and Technology & G. K. Pate (Wani) Institute of Management, Pune-9</strong>, 
+        affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-      <p>This symposium will serve as a platform for global experts, researchers, and academicians to share insights, engage in 
-      meaningful discussions, and showcase innovations contributing to a sustainable future.</p>
+        <p style="font-size: 16px;">This symposium will serve as a platform for global experts, researchers, and academicians to share insights, engage in 
+        meaningful discussions, and showcase innovations contributing to a sustainable future.</p>
 
-      <h3>📢 Call for Papers</h3>
-      <p>We invite original research papers, case studies, and review articles on a wide range of sustainability-related themes.</p>
-      <p>A <strong>Poster Presentation Competition</strong> is also open to students from Classes 8 to 12, with awards and opportunities for selected posters to be presented during the main symposium.</p>
+        <h3 style="color: #2E8B57;">📢 Call for Papers</h3>
+        <p style="font-size: 16px;">We invite original research papers, case studies, and review articles on a wide range of sustainability-related themes.</p>
+        <p style="font-size: 16px;"><strong>Poster Presentation Competition</strong> is also open to students from Classes 8 to 12, with awards and opportunities for selected posters to be presented during the main symposium.</p>
 
-      <p><strong>Registration is free and open to all.</strong></p>
-      <p>You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
-      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdUVOvgylVyQ9mjJ4r2ECyZ" target="_blank">
-      👉 Registration & Submission Form</a></p>
+        <p style="font-size: 16px;"><strong>Registration is free and open to all.</strong></p>
+        <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
 
-      <p>📎 <strong>More information</strong>, including themes and submission deadlines, is available in the attached flyer.</p>
+        <p style="font-size: 16px;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSddxmsA7Oy4l9htUlwBFxY-vT9LA1PnyDODWCIxGcIr36Q8hw/viewform?pli=1" 
+            target="_blank" 
+            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
+            👉 Registration & Submission Form
+          </a>
+        </p>
 
-      <p>We look forward to your enthusiastic participation and support in making ISNASD’25 a grand success!</p>
+        <p style="font-size: 16px;">📎 <strong>More information</strong>, including themes and submission deadlines, is available in the attached flyer.</p>
 
-      <br>
+        <p style="font-size: 16px;">We look forward to your enthusiastic participation and support in making ISNASD’25 a grand success!</p>
 
-      <p>Warm regards,</p>
-      <p><strong>Prof. Archana Mirashi</strong><br>
-      Convenor, ISNASD’25</p>
+        <br>
 
-      <p><strong>Dr. Manoj Tarambale</strong><br>
-      Principal, PVG’s COET & GKPIOM</p>
+        <p style="font-size: 16px;">Warm regards,</p>
+        <p style="font-size: 16px;"><strong>Prof. Archana Mirashi</strong><br>
+        Convenor, ISNASD’25</p>
 
-      <hr>
+        <p style="font-size: 16px;"><strong>Dr. Manoj Tarambale</strong><br>
+        Principal, PVG’s COET & GKPIOM</p>
 
-      <p><strong>📩 For queries, please contact:</strong><br>
-      📧 sustainabilitysymposium@pvgcoet.ac.in<br>
-      👨‍🏫 Faculty Coordinators: 98230 48494 | 82089 92812<br>
-      👩‍🎓 Student Coordinator: 78430 08499</p>
+        <hr style="border: none; border-top: 1px solid #ccc; margin: 30px 0;">
 
-      <p><em>*Please find the event flyer attached for full details.*</em></p>
+        <div style="border-left: 4px solid #2E8B57; padding-left: 16px; background-color: #f2fdf2; padding: 10px 16px; font-size: 15px;">
+          <p><strong>📩 For queries, please contact:</strong></p>
+          <p>📧 <a href="mailto:sustainabilitysymposium@pvgcoet.ac.in">sustainabilitysymposium@pvgcoet.ac.in</a><br>
+            👨‍🏫 Faculty Coordinators: 98230 48494 | 82089 92812<br>
+            👩‍🎓 Student Coordinator: 78430 08499
+          </p>
+        </div>
+
+        <p style="font-size: 14px; font-style: italic; margin-top: 20px;">*Please find the event flyer attached for full details.*</p>
+
+        <p style="font-size: 14px; margin-top: 40px; color: #555;">On behalf of the Student Organizing Committee @ ISNASD’25</p>
+      </div>
     </body>
     </html>
     """
