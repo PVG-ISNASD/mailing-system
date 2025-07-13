@@ -123,7 +123,6 @@ for recipient in recipients:
     </body>
     </html>
     """
-    print(f"Sending mail to {recipient}")
     this_time = send_email(recipient, subject, body, password, attachment_paths)
     if this_time > 0:
       count += 1
@@ -134,4 +133,4 @@ for recipient in recipients:
 print("Total IDs in the list:", len(recipients))
 print("Total mails sent:", count)
 print(f"Total time taken: {total_time:.2f} seconds")
-print(f"Average time taken per mail: {count / total_time} seconds")
+print(f"Average time taken per mail: {total_time / count} seconds")
