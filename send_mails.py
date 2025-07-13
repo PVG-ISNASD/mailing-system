@@ -99,8 +99,6 @@ for recipient in recipients:
 
         <p style="font-size: 16px;">We look forward to your enthusiastic participation and support in making ISNASD’25 a grand success!</p>
 
-        <br>
-
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
         <table style="width: 100%; font-size: 16px;">
