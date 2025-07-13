@@ -48,7 +48,11 @@ attachment_paths = ["./attachment/ISNASD'25-FLyer.pdf"]
 total_time = 0
 count = 0
 
-with open("internal_team.json", 'r') as list:
+filepath = os.path.abspath(
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+)
+
+with open(filepath, 'r') as list:
   recipients = json.load(list)
 
 for recipient in recipients:
