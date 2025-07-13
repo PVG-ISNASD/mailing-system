@@ -3,9 +3,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
+from email.utils import formataddr
 import os
 import time
-import json;
+import json
 
 
 def send_email(recipient, subject, body, password, attachment_paths = None):
@@ -13,6 +14,7 @@ def send_email(recipient, subject, body, password, attachment_paths = None):
   start_time = time.time()
   message = MIMEMultipart()
   message['From'] = sender
+  message['From'] = formataddr(("ISNASD’25 Team", sender))
   message['To'] = recipient
   message['Subject'] = subject
   message.attach(MIMEText(body, 'html'))
