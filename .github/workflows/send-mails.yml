@@ -1,0 +1,22 @@
+name: Bulk Mailing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send_emails:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Run Send Email Script
+        run: python send_mails.py
+        env:
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
