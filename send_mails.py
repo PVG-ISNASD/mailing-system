@@ -57,7 +57,7 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Invitation to Participate in ISNASD’25 – International Symposium on Sustainable Development"
+    subject = "Invitation to Participate in ISNASD’25 – International Symposium on Niche Areas of Sustainable Development"
     body = f"""
     <!DOCTYPE html>
     <html>
@@ -72,7 +72,7 @@ for recipient in recipients:
 
         <p style="font-size: 16px;">We are pleased to invite faculty members and students from your esteemed institution to be a part of the upcoming 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, organized by 
-        <strong>Pune Vidyarthi Griha’s College of Engineering and Technology & G. K. Pate (Wani) Institute of Management, Pune-9</strong>, 
+        <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
         <p style="font-size: 16px;">This symposium will serve as a platform for global experts, researchers, and academicians to share insights, engage in 
@@ -80,7 +80,7 @@ for recipient in recipients:
 
         <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">📢 Call for Papers</h3>
         <p style="font-size: 16px;">We invite original research papers, case studies, and review articles on a wide range of sustainability-related themes.</p>
-        <p style="font-size: 16px;"><strong>Poster Presentation Competition</strong> is also open to students from Classes 8 to 12, with awards and opportunities for selected posters to be presented during the main symposium.</p>
+        <p style="font-size: 16px;"><strong>Poster Presentation Competition</strong> is also open to students from Classes 9 to 12, with awards and opportunities for selected posters to be presented during the main symposium.</p>
 
         <p style="font-size: 16px;"><strong>Registration is free and open to all.</strong></p>
         <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
