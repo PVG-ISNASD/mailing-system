@@ -101,14 +101,20 @@ for recipient in recipients:
 
         <br>
 
-        <p style="font-size: 16px; text-align: right;">Warm regards,</p>
-        <p style="font-size: 16px; text-align: right;"><strong>Prof. Archana Mirashi</strong><br>
-        Convenor, ISNASD’25</p>
+        <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
-        <p style="font-size: 16px; text-align: right;">
-          <strong>Dr. Manoj Tarambale</strong><br>
-          Principal, PVG’s COETM, Pune
-        </p>
+        <table style="width: 100%; font-size: 16px;">
+          <tr>
+            <td style="text-align: left; vertical-align: top;">
+              <strong>Prof. Archana Mirashi</strong><br>
+              Convenor, ISNASD’25
+            </td>
+            <td style="text-align: right; vertical-align: top;">
+              <strong>Dr. Manoj Tarambale</strong><br>
+              Principal, PVG’s COETM, Pune
+            </td>
+          </tr>
+        </table>
 
         <hr style="border: none; border-top: 1px solid #ccc; margin: 30px 0;">
 
