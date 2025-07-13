@@ -105,8 +105,10 @@ for recipient in recipients:
         <p style="font-size: 16px;"><strong>Prof. Archana Mirashi</strong><br>
         Convenor, ISNASD’25</p>
 
-        <p style="font-size: 16px;"><strong>Dr. Manoj Tarambale</strong><br>
-        Principal, PVG’s COET & GKPIOM</p>
+        <p style="font-size: 16px; text-align: right;">
+          <strong>Dr. Manoj Tarambale</strong><br>
+          Principal, PVG’s COETM, Pune
+        </p>
 
         <hr style="border: none; border-top: 1px solid #ccc; margin: 30px 0;">
 
