@@ -101,8 +101,8 @@ for recipient in recipients:
 
         <br>
 
-        <p style="font-size: 16px;">Warm regards,</p>
-        <p style="font-size: 16px;"><strong>Prof. Archana Mirashi</strong><br>
+        <p style="font-size: 16px; text-align: right;">Warm regards,</p>
+        <p style="font-size: 16px; text-align: right;"><strong>Prof. Archana Mirashi</strong><br>
         Convenor, ISNASD’25</p>
 
         <p style="font-size: 16px; text-align: right;">
