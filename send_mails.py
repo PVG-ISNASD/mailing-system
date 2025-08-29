@@ -9,15 +9,16 @@ import time
 import json
 
 
-def send_email(recipient, subject, body, password, attachment_paths = None):
-  sender = "sustainabilitysymposium@pvgcoet.ac.in"
-  start_time = time.time()
-  message = MIMEMultipart()
-  message['From'] = sender
-  message['From'] = formataddr(("ISNASD’25 Team", sender))
-  message['To'] = recipient
-  message['Subject'] = subject
-  message.attach(MIMEText(body, 'html'))
+def send_email(recipient, subject, body, password, attachment_paths=None):
+    sender = "sustainabilitysymposium@pvgcoet.ac.in"
+    display_name = "ISNASD’25 Team"
+    
+    start_time = time.time()
+    message = MIMEMultipart()
+    message['From'] = formataddr((display_name, sender))
+    message['To'] = recipient
+    message['Subject'] = subject
+    message.attach(MIMEText(body, 'html'))
 
   if attachment_paths:
     for attachment_path in attachment_paths:
@@ -51,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
