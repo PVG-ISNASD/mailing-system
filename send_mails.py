@@ -90,13 +90,6 @@ for recipient in recipients:
         </p>
         <p style="font-size: 16px;">Outstanding posters may also get the opportunity to be presented alongside professors and researchers during the main symposium sessions!</p>
 
-        <!-- Dates -->
-        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">🗂️ Important Dates</h3>
-        <ul style="font-size: 16px; margin-left: 20px;">
-          <li><strong>Abstract Submission:</strong> 10-09-2025</li>
-          <li><strong>Final Submission:</strong> 15-10-2025</li>
-        </ul>
-
         <!-- Keep as-is section -->
         <p style="font-size: 16px;"><strong>Registration is free and open to all.</strong></p>
         <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
