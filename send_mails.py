@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'schools.json')
 )
 
 with open(filepath, 'r') as list:
@@ -95,7 +95,7 @@ for recipient in recipients:
         <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
 
         <p style="font-size: 16px;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSddxmsA7Oy4l9htUlwBFxY-vT9LA1PnyDODWCIxGcIr36Q8hw/viewform?pli=1" 
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSenDiTC0ZQumN3H1ZZkpzK3Y5PMPHMtiFNeAeQ2uFP476PfDA/viewform?usp=dialog" 
             target="_blank" 
             style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
             👉 Registration & Submission Form
