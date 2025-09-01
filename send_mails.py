@@ -60,7 +60,7 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 Call for Entries – Poster & Video Competition (ISNASD 2025)"
+    subject = "📢 Call for Entries – Poster & Video Competition (ISNASD'25)"
     body = f"""
     <!DOCTYPE html>
     <html>
