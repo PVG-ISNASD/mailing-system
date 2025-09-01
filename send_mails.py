@@ -10,15 +10,15 @@ import json
 
 
 def send_email(recipient, subject, body, password, attachment_paths=None):
-    sender = "sustainabilitysymposium@pvgcoet.ac.in"
-    display_name = "ISNASD’25 Team"
-    
-    start_time = time.time()
-    message = MIMEMultipart()
-    message['From'] = formataddr((display_name, sender))
-    message['To'] = recipient
-    message['Subject'] = subject
-    message.attach(MIMEText(body, 'html'))
+  sender = "sustainabilitysymposium@pvgcoet.ac.in"
+  display_name = "ISNASD’25 Team"
+  
+  start_time = time.time()
+  message = MIMEMultipart()
+  message['From'] = formataddr((display_name, sender))
+  message['To'] = recipient
+  message['Subject'] = subject
+  message.attach(MIMEText(body, 'html'))
 
   if attachment_paths:
     for attachment_path in attachment_paths:
@@ -46,7 +46,7 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/ISNASD'25-FLyer.pdf"]
+attachment_paths = ["./attachment/ISNASD25_Poster-Competition.pdf"]
 
 total_time = 0
 count = 0
@@ -60,31 +60,44 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Invitation to Participate in ISNASD’25 – International Symposium on Niche Areas of Sustainable Development"
+    subject = "📢 Call for Entries – Poster & Video Competition (ISNASD 2025)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>{subject}</title>
+      <title>Invitation to ISNASD’25 – Poster & Video Competition for School Students</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
-        <p style="font-size: 16px;">Dear Sir/Ma’am,</p>
+        <p style="font-size: 16px;">Respected Principal / Teachers,</p>
 
-        <p style="font-size: 16px;">We are pleased to invite faculty members and students from your esteemed institution to be a part of the upcoming 
-        <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, organized by 
-        <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
+        <p style="font-size: 16px;">We are pleased to invite students from your esteemed school to participate in the 
+        <strong>Poster Presentation & Video Making Competition</strong> as part of the 
+        <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
+        organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <p style="font-size: 16px;">This symposium will serve as a platform for global experts, researchers, and academicians to share insights, engage in 
-        meaningful discussions, and showcase innovations contributing to a sustainable future.</p>
+        <!-- Competition Info -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🖼️ Poster & Video Making Competition (Classes 9–12)</h3>
+        <p style="font-size: 16px;">This competition provides a platform for school students to showcase their creativity and ideas on themes aligned with the <strong>United Nations Sustainable Development Goals (SDGs)</strong>.</p>
+        <p style="font-size: 16px; background-color: #f2fdf2; padding: 10px; border-left: 4px solid #2E8B57; border-radius: 4px;">
+          🏆 <strong>Exciting Prize Money:</strong><br>
+          1st Prize – ₹5000<br>
+          2nd Prize – ₹3000<br>
+          3rd Prize – ₹1000
+        </p>
+        <p style="font-size: 16px;">Outstanding posters may also get the opportunity to be presented alongside professors and researchers during the main symposium sessions!</p>
 
-        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">📢 Call for Papers</h3>
-        <p style="font-size: 16px;">We invite original research papers, case studies, and review articles on a wide range of sustainability-related themes.</p>
-        <p style="font-size: 16px;"><strong>Poster Presentation Competition</strong> is also open to students from Classes 9 to 12, with awards and opportunities for selected posters to be presented during the main symposium.</p>
+        <!-- Dates -->
+        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">🗂️ Important Dates</h3>
+        <ul style="font-size: 16px; margin-left: 20px;">
+          <li><strong>Abstract Submission:</strong> 10-09-2025</li>
+          <li><strong>Final Submission:</strong> 15-10-2025</li>
+        </ul>
 
+        <!-- Keep as-is section -->
         <p style="font-size: 16px;"><strong>Registration is free and open to all.</strong></p>
         <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
 
@@ -96,9 +109,9 @@ for recipient in recipients:
           </a>
         </p>
 
-        <p style="font-size: 16px;">📎 <strong>More information</strong>, including themes and submission deadlines, is available in the attached flyer.</p>
+        <p style="font-size: 16px;">📎 <strong>More information</strong>, including competition guidelines and deadlines, is available in the attached flyer.</p>
 
-        <p style="font-size: 16px;">We look forward to your enthusiastic participation and support in making ISNASD’25 a grand success!</p>
+        <p style="font-size: 16px;">We look forward to enthusiastic participation from your school in making ISNASD’25 a memorable event!</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
@@ -121,11 +134,11 @@ for recipient in recipients:
           <p><strong>📩 For queries, please contact:</strong></p>
           <p>📧 <a href="mailto:sustainabilitysymposium@pvgcoet.ac.in">sustainabilitysymposium@pvgcoet.ac.in</a><br>
             👨‍🏫 Faculty Coordinators: 98230 48494 | 82089 92812<br>
-            👩‍🎓 Student Coordinator: 78430 08499
+            👩‍🎓 Student Coordinator: 78430 08499 | 90960 82640
           </p>
         </div>
 
-        <p style="font-size: 14px; font-style: italic; margin-top: 20px;">*Please find the event flyer attached for full details.*</p>
+        <p style="font-size: 14px; font-style: italic; margin-top: 20px;">*Please find the competition flyer attached for full details.*</p>
 
         <p style="font-size: 14px; margin-top: 40px; color: #555;">On behalf of the Student Organizing Committee @ ISNASD’25</p>
       </div>
