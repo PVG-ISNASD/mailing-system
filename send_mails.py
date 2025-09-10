@@ -60,7 +60,7 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📑 Abstract Submission – ISNASD’25 (Sustainability Symposium) (test 1)"
+    subject = "📑 Abstract Submission – ISNASD’25 (Sustainability Symposium)"
     body = f"""
     <!DOCTYPE html>
     <html>
@@ -87,7 +87,7 @@ for recipient in recipients:
 
         <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
-          <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" 
+          <a href="https://chat.whatsapp.com/KLZyOua6T0p5L7RA2nP0yJ?mode=ems_wa_t" 
             target="_blank" 
             style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
             👉 Join WhatsApp Group
