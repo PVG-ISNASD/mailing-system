@@ -46,13 +46,13 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/ISNASD25_Poster-Competition.pdf"]
+attachment_paths = []
 
 total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'schools.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,51 +60,41 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 Call for Entries – Poster & Video Competition (ISNASD'25)"
+    subject = "📑 Abstract Submission – ISNASD’25 (Sustainability Symposium) (test 1)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Invitation to ISNASD’25 – Poster & Video Competition for School Students</title>
+      <title>Abstract Submission – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
-        <p style="font-size: 16px;">Respected Principal / Teachers,</p>
+        <p style="font-size: 16px;">Respected Sir/Madam,</p>
 
-        <p style="font-size: 16px;">We are pleased to invite students from your esteemed school to participate in the 
-        <strong>Poster Presentation & Video Making Competition</strong> as part of the 
+        <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Competition Info -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🖼️ Poster & Video Making Competition (Classes 9–12)</h3>
-        <p style="font-size: 16px;">This competition provides a platform for school students to showcase their creativity and ideas on themes aligned with the <strong>United Nations Sustainable Development Goals (SDGs)</strong>.</p>
-        <p style="font-size: 16px; background-color: #f2fdf2; padding: 10px; border-left: 4px solid #2E8B57; border-radius: 4px;">
-          🏆 <strong>Exciting Prize Money:</strong><br>
-          1st Prize – ₹5000<br>
-          2nd Prize – ₹3000<br>
-          3rd Prize – ₹1000
-        </p>
-        <p style="font-size: 16px;">Outstanding posters may also get the opportunity to be presented alongside professors and researchers during the main symposium sessions!</p>
+        <!-- Abstract Info -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📑 Abstract Submission</h3>
+        <p style="font-size: 16px;">We are pleased to invite you to submit your abstract for ISNASD’25. Whether you have chosen to 
+        <strong>present and submit a paper</strong> or to <strong>submit only</strong>, today is the scheduled date for submission.</p>
 
-        <!-- Keep as-is section -->
-        <p style="font-size: 16px;"><strong>Registration is free and open to all.</strong></p>
-        <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
+        <p style="font-size: 16px;">Please send your abstract (PDF/Word) by replying to this email. We look forward to your valuable contribution to the symposium.</p>
 
+        <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSenDiTC0ZQumN3H1ZZkpzK3Y5PMPHMtiFNeAeQ2uFP476PfDA/viewform?usp=dialog" 
+          <a href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK" 
             target="_blank" 
             style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Registration & Submission Form
+            👉 Join WhatsApp Group
           </a>
         </p>
 
-        <p style="font-size: 16px;">📎 <strong>More information</strong>, including competition guidelines and deadlines, is available in the attached flyer.</p>
-
-        <p style="font-size: 16px;">We look forward to enthusiastic participation from your school in making ISNASD’25 a memorable event!</p>
+        <p style="font-size: 16px;">Stay connected with us for symposium updates and important announcements.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
@@ -130,8 +120,6 @@ for recipient in recipients:
             👩‍🎓 Student Coordinator: 78430 08499 | 90960 82640
           </p>
         </div>
-
-        <p style="font-size: 14px; font-style: italic; margin-top: 20px;">*Please find the competition flyer attached for full details.*</p>
 
         <p style="font-size: 14px; margin-top: 40px; color: #555;">On behalf of the Student Organizing Committee @ ISNASD’25</p>
       </div>
