@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'schools.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'schools2.json')
 )
 
 with open(filepath, 'r') as list:
