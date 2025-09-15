@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'schools2.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'jr_colleges.json')
 )
 
 with open(filepath, 'r') as list:
@@ -66,14 +66,14 @@ for recipient in recipients:
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Invitation to ISNASD’25 – Poster & Video Competition for School Students</title>
+      <title>Invitation to ISNASD’25 – Poster & Video Competition for Jr College Students</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
         <p style="font-size: 16px;">Respected Principal / Teachers,</p>
 
-        <p style="font-size: 16px;">We are pleased to invite students from your esteemed school to participate in the 
+        <p style="font-size: 16px;">We are pleased to invite students from your esteemed Jr College to participate in the 
         <strong>Poster Presentation & Video Making Competition</strong> as part of the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
@@ -81,7 +81,7 @@ for recipient in recipients:
 
         <!-- Competition Info -->
         <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🖼️ Poster & Video Making Competition (Classes 9–12)</h3>
-        <p style="font-size: 16px;">This competition provides a platform for school students to showcase their creativity and ideas on themes aligned with the <strong>United Nations Sustainable Development Goals (SDGs)</strong>.</p>
+        <p style="font-size: 16px;">This competition provides a platform for Jr College students to showcase their creativity and ideas on themes aligned with the <strong>United Nations Sustainable Development Goals (SDGs)</strong>.</p>
         <p style="font-size: 16px; background-color: #f2fdf2; padding: 10px; border-left: 4px solid #2E8B57; border-radius: 4px;">
           🏆 <strong>Exciting Prize Money:</strong><br>
           1st Prize – ₹5000<br>
@@ -104,7 +104,7 @@ for recipient in recipients:
 
         <p style="font-size: 16px;">📎 <strong>More information</strong>, including competition guidelines and deadlines, is available in the attached flyer.</p>
 
-        <p style="font-size: 16px;">We look forward to enthusiastic participation from your school in making ISNASD’25 a memorable event!</p>
+        <p style="font-size: 16px;">We look forward to enthusiastic participation from your Jr College in making ISNASD’25 a memorable event!</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
