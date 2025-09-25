@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
 )
 
 with open(filepath, 'r') as list:
@@ -129,7 +129,7 @@ for recipient in recipients:
         <!-- Important Dates -->
         <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">🗂️ Extended Submission Deadline</h3>
         <ul style="font-size: 16px; margin-left: 20px;">
-          <li><strong>Abstract Submission:</strong> 15-10-2025</li>
+          <li><strong>Abstract Submission:</strong> 10-10-2025</li>
           <li><strong>Full Paper Submission:</strong> 15-10-2025</li>
         </ul>
         <p style="font-size: 16px; color: #d32f2f; font-weight: bold;">⚠️ This is the final extension – don’t miss the opportunity!</p>
