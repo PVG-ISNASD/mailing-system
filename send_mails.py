@@ -46,7 +46,7 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/ISNASD25_Call-for-Paper.pdf", "./attachment/ISNASD25_Poster-Competition.pdf"]
+attachment_paths = ["./attachment/ISNASD'25_Paper_Extended_Flyer.pdf", "./attachment/ISNASD'_Poster_Extended_Flyer.pdf"]
 
 total_time = 0
 count = 0
@@ -60,20 +60,20 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 ISNASD’25 – Call for Papers & Competitions | Exciting Prizes Await! (Test 1)"
+    subject = "📢 ISNASD’25 – Final Call for Papers & Competitions | Extended Deadline 15 Oct 2025!"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Invitation to ISNASD’25 – International Symposium on Niche Areas of Sustainable Development</title>
+      <title>Final Call – ISNASD’25: International Symposium on Niche Areas of Sustainable Development</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
         <p style="font-size: 16px;">Dear Sir/Ma’am,</p>
 
-        <p style="font-size: 16px;">We are delighted to invite faculty members, researchers, and students to the upcoming 
+        <p style="font-size: 16px;">This is the <strong>Final Call</strong> to invite faculty members, researchers, and students to participate in the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, organized by 
         <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
@@ -91,7 +91,7 @@ for recipient in recipients:
         </ul>
 
         <!-- Call for Papers -->
-        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">📢 Call for Papers</h3>
+        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">📢 Final Call for Papers</h3>
         <p style="font-size: 16px;">We welcome <strong>original research papers, case studies, and review articles</strong> on sustainability-related themes.</p>
         <p style="font-size: 16px; background-color: #fff3e0; padding: 10px; border-left: 4px solid #d32f2f; border-radius: 4px;">
           🏆 <strong>Best Paper Awards:</strong><br>
@@ -127,13 +127,14 @@ for recipient in recipients:
         <p style="font-size: 16px;">Selected posters may even be presented alongside professors and researchers during the main symposium sessions!</p>
 
         <!-- Important Dates -->
-        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">🗂️ Important Dates</h3>
+        <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">🗂️ Extended Submission Deadline</h3>
         <ul style="font-size: 16px; margin-left: 20px;">
-          <li><strong>Abstract Submission:</strong> 10-09-2025</li>
+          <li><strong>Abstract Submission:</strong> 15-10-2025</li>
           <li><strong>Full Paper Submission:</strong> 15-10-2025</li>
         </ul>
+        <p style="font-size: 16px; color: #d32f2f; font-weight: bold;">⚠️ This is the final extension – don’t miss the opportunity!</p>
 
-        <!-- Keep as-is section -->
+        <!-- Registration -->
         <p style="font-size: 16px;"><strong>Registration is free and open to all.</strong></p>
         <p style="font-size: 16px;">You may register by scanning the QR code on the attached flyer or by clicking the link below:</p>
 
