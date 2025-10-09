@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'abstract.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,13 +60,13 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📑 Abstract Submission – ISNASD’25 (Sustainability Symposium)"
+    subject = "Audience Registration – ISNASD’25 (Sustainability Symposium)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Abstract Submission – ISNASD’25</title>
+      <title>Audience Registration – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -78,23 +78,23 @@ for recipient in recipients:
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Abstract Info -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📑 Abstract Submission</h3>
-        <p style="font-size: 16px;">We are pleased to invite you to submit your abstract for ISNASD’25. Whether you have chosen to 
-        <strong>present and submit a paper</strong> or to <strong>submit only</strong>, 10-10-2025 is the scheduled date for submission.</p>
+        <!-- Audience Info -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🎟️ Audience Participation</h3>
+        <p style="font-size: 16px;">Thank you for showing interest in attending ISNASD’25 as an <strong>audience member</strong>. 
+        We are delighted to have you join us for this insightful symposium that brings together experts, researchers, and academicians to discuss emerging trends in sustainability.</p>
 
-        <p style="font-size: 16px;">Please send your abstract (PDF/Word) by replying to this email. We look forward to your valuable contribution to the symposium.</p>
+        <p style="font-size: 16px;">Please join the official WhatsApp group for audience members to stay updated on schedules, sessions, and announcements related to the symposium.</p>
 
         <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
-          <a href="https://chat.whatsapp.com/KLZyOua6T0p5L7RA2nP0yJ?mode=ems_wa_t" 
+          <a href="https://chat.whatsapp.com/LvNfxZanwZC4D6Z0ZPozrA?mode=wwc" 
             target="_blank" 
             style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group
+            👉 Join Attendees WhatsApp Group
           </a>
         </p>
 
-        <p style="font-size: 16px;">If you’ve already submitted the abstract and joined the group, you can ignore this message. Otherwise, please do the needful.</p>
+        <p style="font-size: 16px;">If you’ve already joined the group, you can ignore this message. Otherwise, please do the needful.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
