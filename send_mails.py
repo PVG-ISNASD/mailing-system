@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'abstract.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -81,7 +81,7 @@ for recipient in recipients:
         <!-- Abstract Info -->
         <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📑 Abstract Submission</h3>
         <p style="font-size: 16px;">We are pleased to invite you to submit your abstract for ISNASD’25. Whether you have chosen to 
-        <strong>present and submit a paper</strong> or to <strong>submit only</strong>, today is the scheduled date for submission.</p>
+        <strong>present and submit a paper</strong> or to <strong>submit only</strong>, 10-10-2025 is the scheduled date for submission.</p>
 
         <p style="font-size: 16px;">Please send your abstract (PDF/Word) by replying to this email. We look forward to your valuable contribution to the symposium.</p>
 
@@ -94,7 +94,7 @@ for recipient in recipients:
           </a>
         </p>
 
-        <p style="font-size: 16px;">Stay connected with us for symposium updates and important announcements.</p>
+        <p style="font-size: 16px;">If you’ve already submitted the abstract and joined the group, you can ignore this message. Otherwise, please do the needful.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
