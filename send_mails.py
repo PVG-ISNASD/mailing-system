@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'students.json')
 )
 
 with open(filepath, 'r') as list:
@@ -95,7 +95,7 @@ for recipient in recipients:
           </a>
         </p>
 
-        <p style="font-size: 16px;">You don’t need to rush — the <strong>final submission deadline is 15th October 2025</strong>.</p>
+        <p style="font-size: 16px;">You don’t need to rush, the <strong>final submission deadline is 15th October 2025</strong>.</p>
 
         <p style="font-size: 16px;">If you’ve already joined the group and submitted your entry, you can ignore this message.</p>
 
