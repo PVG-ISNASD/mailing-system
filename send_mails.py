@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'students.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,31 +60,34 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 ISNASD’25 Poster & Video Competition – Submission & WhatsApp Group Details"
+    subject = "📢 ISNASD’25 Poster & Video Competition – Extended Dates & Reminder"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>ISNASD’25 Poster & Video Competition</title>
+      <title>ISNASD’25 Poster & Video Competition – Reminder</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
         <p style="font-size: 16px;">Dear Participant,</p>
 
-        <p style="font-size: 16px;">Thank you for registering for the <strong>Poster Presentation & Video Making Competition</strong> under <strong>ISNASD’25</strong>! 🌿</p>
+        <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
+        <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>! 🌿</p>
 
-        <p style="font-size: 16px;">Please join the official <strong>WhatsApp group</strong> and complete your <strong>submission</strong> using the links below:</p>
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Reminder – Poster & Video Competition</h3>
 
-        <!-- WhatsApp Group -->
-        <p style="font-size: 16px;">
-          📱 <a href="https://chat.whatsapp.com/JWuxas7T5j7JdJcxKj3kNI?mode=wwc" 
-            target="_blank" 
-            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group
-          </a>
-        </p>
+        <p style="font-size: 16px;">This is a gentle reminder regarding the upcoming <strong>Poster Presentation & Video Making Competition</strong> under ISNASD’25.</p>
+
+        <p style="font-size: 16px;">If you have not yet submitted your <strong>poster</strong> or <strong>video entry</strong>, kindly do so at the earliest. The dates have been <strong>extended</strong> as follows:</p>
+
+        <ul style="font-size: 16px; line-height: 1.8;">
+          <li><strong>Registration Deadline:</strong> 24<sup>th</sup> October 2025</li>
+          <li><strong>Submission Deadline:</strong> 25<sup>th</sup> October 2025</li>
+        </ul>
+
+        <p style="font-size: 16px;">You can complete your submission using the link below:</p>
 
         <!-- Submission Form -->
         <p style="font-size: 16px;">
@@ -95,9 +98,20 @@ for recipient in recipients:
           </a>
         </p>
 
-        <p style="font-size: 16px;">You don’t need to rush, the <strong>final submission deadline is 15th October 2025</strong>.</p>
+        <p style="font-size: 16px;">We’ve also attached the <strong>Speakers Flyer</strong> highlighting our distinguished guests and sessions at ISNASD’25.</p>
 
-        <p style="font-size: 16px;">If you’ve already joined the group and submitted your entry, you can ignore this message.</p>
+        <p style="font-size: 16px;">The main event is scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup>, and 5<sup>th</sup> November 2025</strong>. We look forward to your enthusiastic participation!</p>
+
+        <!-- WhatsApp Group -->
+        <p style="font-size: 16px;">
+          📱 <a href="https://chat.whatsapp.com/JWuxas7T5j7JdJcxKj3kNI?mode=wwc" 
+            target="_blank" 
+            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
+            👉 Join WhatsApp Group
+          </a>
+        </p>
+
+        <p style="font-size: 16px;">If you’ve already joined the group and completed your submission, you may kindly ignore this message.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
