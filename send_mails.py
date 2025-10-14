@@ -46,13 +46,13 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = []
+attachment_paths = ["./attachment/ISNASD'25_FLYER.pdf", "./attachment/Paper_format.png"]
 
 total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'abstract.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,13 +60,13 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📑 Abstract Submission – ISNASD’25 (Sustainability Symposium)"
+    subject = "📢 Final Paper Submission Reminder – ISNASD’25 (Sustainability Symposium)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Abstract Submission – ISNASD’25</title>
+      <title>Final Paper Submission Reminder – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -78,12 +78,22 @@ for recipient in recipients:
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Abstract Info -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📑 Abstract Submission</h3>
-        <p style="font-size: 16px;">We are pleased to invite you to submit your abstract for ISNASD’25. Whether you have chosen to 
-        <strong>present and submit a paper</strong> or to <strong>submit only</strong>, 10-10-2025 is the scheduled date for submission.</p>
+        <!-- Paper Submission Reminder -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Final Paper Submission Reminder</h3>
 
-        <p style="font-size: 16px;">Please send your abstract (PDF/Word) by replying to this email. We look forward to your valuable contribution to the symposium.</p>
+        <p style="font-size: 16px;">This is a gentle reminder regarding the upcoming <strong>ISNASD’25 Symposium</strong> scheduled on 
+        <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>.</p>
+
+        <p style="font-size: 16px;">If you have not yet submitted your <strong>final paper</strong> or <strong>abstract</strong>, kindly do so at the earliest. 
+        Please send your file (in PDF/Word format) by replying to this email.</p>
+
+        <p style="font-size: 16px;">We have also attached the following for your reference:</p>
+        <ul style="font-size: 16px;">
+          <li><strong>Paper Format</strong> – for preparing your final paper</li>
+          <li><strong>Speakers Flyer</strong> – featuring our distinguished speakers</li>
+        </ul>
+
+        <p style="font-size: 16px;">We look forward to your valuable participation and contribution to ISNASD’25.</p>
 
         <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
@@ -94,7 +104,7 @@ for recipient in recipients:
           </a>
         </p>
 
-        <p style="font-size: 16px;">If you’ve already submitted the abstract and joined the group, you can ignore this message. Otherwise, please do the needful.</p>
+        <p style="font-size: 16px;">If you’ve already submitted your paper and joined the group, you may kindly ignore this message. Otherwise, please complete the submission and join the group for regular updates.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
