@@ -46,7 +46,7 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = []
+attachment_paths = ["./attachment/ISNASD'25_FLYER.pdf"]
 
 total_time = 0
 count = 0
