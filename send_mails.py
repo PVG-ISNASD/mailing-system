@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'abstract.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,40 +60,48 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 Final Paper Submission Reminder – ISNASD’25 (Sustainability Symposium)"
+    subject = "📢 Final Call for Paper Submission – ISNASD’25 (Sustainability Symposium)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Final Paper Submission Reminder – ISNASD’25</title>
+      <title>Final Call for Paper Submission – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
-        <p style="font-size: 16px;">Respected Sir/Madam,</p>
+        <p style="font-size: 16px;">Hello {recipient['name']},</p>
 
         <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Paper Submission Reminder -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Final Paper Submission Reminder</h3>
+        <!-- Final Call Message -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Final Call for Paper Submission</h3>
 
-        <p style="font-size: 16px;">This is a gentle reminder regarding the upcoming <strong>ISNASD’25 Symposium</strong> scheduled on 
-        <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>.</p>
+        <p style="font-size: 16px;">We sincerely thank you for submitting your <strong>abstract</strong> titled 
+        <em>“{recipient['topic']}”</em> earlier under ISNASD’25.</p>
 
-        <p style="font-size: 16px;">If you have not yet submitted your <strong>final paper</strong> or <strong>abstract</strong>, kindly do so at the earliest. 
-        Please send your file (in PDF/Word format) by replying to this email.</p>
+        <p style="font-size: 16px;">As per our records, we have not yet received your <strong>final paper</strong>. 
+        Although the deadline for final paper submission has already passed, the Organizing Committee is providing 
+        a <strong>final opportunity</strong> for authors to complete their submission.</p>
 
-        <p style="font-size: 16px;">We have also attached the following for your reference:</p>
+        <p style="font-size: 16px;">You are kindly requested to send your <strong>final paper (PDF or Word format)</strong> 
+        at the earliest by replying to this email. Submissions received promptly will still be considered for inclusion 
+        in the proceedings and presentation schedule.</p>
+
+        <p style="font-size: 16px;">The symposium is scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>. 
+        We would be delighted to have your active participation in this academic event.</p>
+
+        <p style="font-size: 16px;">For your convenience, we have attached the following:</p>
         <ul style="font-size: 16px;">
-          <li><strong>Paper Format</strong> – for preparing your final paper</li>
+          <li><strong>Paper Format</strong> – to prepare your final paper</li>
           <li><strong>Speakers Flyer</strong> – featuring our distinguished speakers</li>
         </ul>
 
-        <p style="font-size: 16px;">We look forward to your valuable participation and contribution to ISNASD’25.</p>
+        <p style="font-size: 16px;">We truly value your contribution and encourage you to submit your final paper at the earliest possible.</p>
 
         <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
@@ -104,7 +112,7 @@ for recipient in recipients:
           </a>
         </p>
 
-        <p style="font-size: 16px;">If you’ve already submitted your paper and joined the group, you may kindly ignore this message. Otherwise, please complete the submission and join the group for regular updates.</p>
+        <p style="font-size: 16px;">If you have not yet joined the WhatsApp group, please do so using the above link to receive important symposium updates.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
@@ -136,7 +144,8 @@ for recipient in recipients:
     </body>
     </html>
     """
-    this_time = send_email(recipient, subject, body, password, attachment_paths)
+    print(f"Sending mail to {recipient['name']} ({recipient['email']})...")
+    this_time = send_email(recipient["email"], subject, body, password, attachment_paths)
     if this_time > 0:
       count += 1
       total_time += this_time
