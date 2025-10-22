@@ -1,9 +1,37 @@
 [
-  "jagadishdrp@gmail.com",
-  "24113018@pvgcoet.ac.in",
-  "asm_applied@pvgcoet.ac.in", 
-  "rg_applied@pvgcoet.ac.in",
-  "rishitk07@gmail.com",
-  "shrawanithorat12@gmail.com",
-  "padmaraj584@gmail.com"
+  {
+    "email": "jagadishdrp@gmail.com",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  },
+  {
+    "email": "24113018@pvgcoet.ac.in",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  },
+  {
+    "email": "asm_applied@pvgcoet.ac.in",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  },
+  {
+    "email": "rg_applied@pvgcoet.ac.in",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  },
+  {
+    "email": "rishitk07@gmail.com",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  },
+  {
+    "email": "shrawanithorat12@gmail.com",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  },
+  {
+    "email": "padmaraj584@gmail.com",
+    "name": "Placeholder Name",
+    "topic": "Placeholder Topic"
+  }
 ]
