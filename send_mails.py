@@ -46,13 +46,13 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/ISNASD'25_FLYER.pdf", "./attachment/Paper_format.png"]
+attachment_paths = ["./attachment/ISNASD'25_FLYER.pdf"]
 
 total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,59 +60,47 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 Final Call for Paper Submission – ISNASD’25 (Sustainability Symposium)"
+    subject = "🎉 Paper Selected for Presentation – ISNASD’25 (Sustainability Symposium)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Final Call for Paper Submission – ISNASD’25</title>
+      <title>Paper Selected for Presentation – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
-        <p style="font-size: 16px;">Hello {recipient['name']},</p>
+        <p style="font-size: 16px;">Respected {recipient['name']},</p>
 
         <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Final Call Message -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Final Call for Paper Submission</h3>
+        <!-- Paper Selection Announcement -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🎉 Congratulations! Your Paper Has Been Selected for Presentation</h3>
 
-        <p style="font-size: 16px;">We sincerely thank you for submitting your <strong>abstract</strong> titled 
-        <em>“{recipient['topic']}”</em> earlier under ISNASD’25.</p>
+        <p style="font-size: 16px;">We are pleased to inform you that your paper titled 
+        <strong>“{recipient['topic']}”</strong> has been <strong>selected for presentation</strong> at the 
+        <strong>ISNASD’25 Symposium</strong> scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>.</p>
 
-        <p style="font-size: 16px;">As per our records, we have not yet received your <strong>final paper</strong>. 
-        Although the deadline for final paper submission has already passed, the Organizing Committee is providing 
-        a <strong>final opportunity</strong> for authors to complete their submission.</p>
+        <p style="font-size: 16px;">Hearty congratulations to you and your co-authors! We look forward to your active participation and valuable insights during the symposium sessions.</p>
 
-        <p style="font-size: 16px;">You are kindly requested to send your <strong>final paper (PDF or Word format)</strong> 
-        at the earliest by replying to this email. Submissions received promptly will still be considered for inclusion 
-        in the proceedings and presentation schedule.</p>
-
-        <p style="font-size: 16px;">The symposium is scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>. 
-        We would be delighted to have your active participation in this academic event.</p>
-
-        <p style="font-size: 16px;">For your convenience, we have attached the following:</p>
-        <ul style="font-size: 16px;">
-          <li><strong>Paper Format</strong> – to prepare your final paper</li>
-          <li><strong>Speakers Flyer</strong> – featuring our distinguished speakers</li>
-        </ul>
-
-        <p style="font-size: 16px;">We truly value your contribution and encourage you to submit your final paper at the earliest possible.</p>
+        <p style="font-size: 16px;">Please find attached the <strong>Event Flyer</strong> for more information about ISNASD’25.</p>
 
         <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
           <a href="https://chat.whatsapp.com/KLZyOua6T0p5L7RA2nP0yJ?mode=ems_wa_t" 
             target="_blank" 
             style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group
+            👉 Join WhatsApp Group for Presenters
           </a>
         </p>
 
-        <p style="font-size: 16px;">If you have not yet joined the WhatsApp group, please do so using the above link to receive important symposium updates.</p>
+        <p style="font-size: 16px;">If you’ve not yet joined the group, kindly do so to receive presentation schedule updates, technical instructions, and other important announcements.</p>
+
+        <p style="font-size: 16px;">Once again, congratulations, and we look forward to hosting you at ISNASD’25!</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
