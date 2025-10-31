@@ -1,37 +1,22 @@
 [
   {
-    "email": "jagadishdrp@gmail.com",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
+    "registration_no": "184001",
+    "name": "Jagdish Prajapati",
+    "email": "jagadishdrp@gmail.com"
   },
   {
-    "email": "24113018@pvgcoet.ac.in",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
+    "registration_no": "184002",
+    "name": "Jagdish Prajapati",
+    "email": "24113018@pvgcoet.ac.in"
   },
   {
-    "email": "asm_applied@pvgcoet.ac.in",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
+    "registration_no": "184003",
+    "name": "Prof. Archana Mirashi",
+    "email": "rg_applied@pvgcoet.ac.in"
   },
   {
-    "email": "rg_applied@pvgcoet.ac.in",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
-  },
-  {
-    "email": "rishitk07@gmail.com",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
-  },
-  {
-    "email": "shrawanithorat12@gmail.com",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
-  },
-  {
-    "email": "padmaraj584@gmail.com",
-    "name": "Placeholder Name",
-    "topic": "Placeholder Topic"
+    "registration_no": "184004",
+    "name": "Prof. Ranjeeta Ghosh",
+    "email": "rg_applied@pvgcoet.ac.in"
   }
 ]
