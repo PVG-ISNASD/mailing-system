@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,7 +60,7 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Your ISNASD’25 Registration Number & Event Details (TEST)"
+    subject = "Your ISNASD’25 Registration Number & Event Details"
 
     body = f"""
     <!DOCTYPE html>
