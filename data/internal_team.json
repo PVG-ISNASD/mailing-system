@@ -1,22 +1,32 @@
 [
   {
-    "registration_no": "184001",
-    "name": "Jagdish Prajapati",
+    "time": "PLACEHOLDER TIME SLOT",
+    "topic": "PLACEHOLDER TOPIC",
+    "resource_person": "Jagdish Prajapati",
     "email": "jagadishdrp@gmail.com"
   },
   {
-    "registration_no": "184002",
-    "name": "Jagdish Prajapati",
+    "time": "PLACEHOLDER TIME SLOT",
+    "topic": "PLACEHOLDER TOPIC",
+    "resource_person": "Jagdish Prajapati",
     "email": "24113018@pvgcoet.ac.in"
   },
   {
-    "registration_no": "184003",
-    "name": "Prof. Archana Mirashi",
+    "time": "PLACEHOLDER TIME SLOT",
+    "topic": "PLACEHOLDER TOPIC",
+    "resource_person": "Prof. Archana Mirashi",
     "email": "asm_applied@pvgcoet.ac.in"
   },
   {
-    "registration_no": "184004",
-    "name": "Prof. Ranjeeta Ghosh",
+    "time": "PLACEHOLDER TIME SLOT",
+    "topic": "PLACEHOLDER TOPIC",
+    "resource_person": "Prof. Ranjeeta Ghosh",
     "email": "rg_applied@pvgcoet.ac.in"
+  },
+  {
+    "time": "PLACEHOLDER TIME SLOT",
+    "topic": "PLACEHOLDER TOPIC",
+    "resource_person": "Padma",
+    "email": "padmaraj584@gmail.com"
   }
 ]

@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,14 +60,13 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Your ISNASD’25 Registration Number & Event Details"
-
+    subject = "Presentation Schedule & Instructions – ISNASD’25 (Day 3, 5th November 2025)"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Your ISNASD’25 Registration Number</title>
+      <title>Presentation Schedule & Instructions – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -76,38 +75,44 @@ for recipient in recipients:
 
         <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
-        organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
-        affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
+        organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune–9</strong>, 
+        affiliated with <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Registration Number Message -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🎟️ Your ISNASD’25 Registration Number</h3>
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Presentation Schedule & Instructions – ISNASD’25</h3>
 
-        <p style="font-size: 16px;">We are delighted to confirm your registration for <strong>ISNASD’25</strong>.</p>
+        <p style="font-size: 16px;"><strong>Please find your paper presentation details below:</strong></p>
 
-        <p style="font-size: 16px;">
-          Your unique registration number is:<br>
-          <span style="display: inline-block; font-size: 20px; color: #ffffff; background-color: #2E8B57; padding: 10px 20px; border-radius: 6px; font-weight: bold;">
-            {recipient['registration_no']}
-          </span>
-        </p>
+        <table style="font-size: 16px; margin-top: 10px;">
+          <tr><td><strong>Date:</strong></td><td>5th November 2025</td></tr>
+          <tr><td><strong>Day:</strong></td><td>Wednesday</td></tr>
+          <tr><td><strong>Time Slot:</strong></td><td>{recipient['time']}</td></tr>
+          <tr><td><strong>Topic:</strong></td><td>{recipient['topic']}</td></tr>
+          <tr><td><strong>Presenter(s):</strong></td><td>{recipient['resource_person']}</td></tr>
+          <tr><td><strong>Mode:</strong></td><td>Online</td></tr>
+          <tr><td><strong>Format:</strong></td><td>12-minute presentation + 1–2 minutes Q&A</td></tr>
+        </table>
 
-        <p style="font-size: 16px;">Please <strong>save this registration number carefully</strong> — it will be required for verification and communication throughout the symposium.  
-        You may take a <strong>screenshot</strong> of this email or <strong>star it</strong> in your inbox to keep it handy.</p>
+        <p style="font-size: 16px; margin-top: 18px;"><strong>🔗 Meeting Link:</strong> The Day 3 session link will be shared in the official WhatsApp group at <strong>11:45 AM</strong> on 5th November.</p>
 
-        <p style="font-size: 16px;">The symposium is scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>, and we look forward to your enthusiastic participation.</p>
+        <h4 style="color: #2E8B57; margin-top: 25px;">⚠ Important Instructions</h4>
 
-        <p style="font-size: 16px;">We’ve also attached the <strong>Event Flyer</strong> containing important details about the event.</p>
+        <ul style="font-size: 16px;">
+          <li>Your time slot may vary by <strong>±30 minutes</strong> depending on the flow of presentations.</li>
+          <li>Please ensure your presence in the session at least <strong>30 minutes before</strong> your allotted time.</li>
+          <li>If you are unavailable during your slot or the surrounding buffer, your presentation may be passed.</li>
+        </ul>
 
-        <!-- WhatsApp Group -->
-        <p style="font-size: 16px;">
-          <a href="https://chat.whatsapp.com/LvNfxZanwZC4D6Z0ZPozrA?mode=wwt" 
-            target="_blank" 
-            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group
-          </a>
-        </p>
+        <h4 style="color: #2E8B57; margin-top: 25px;">✅ Action Required (Please reply to this email):</h4>
+        <ol style="font-size: 16px;">
+          <li><strong>Consent for Test Meeting (11:00–11:45 AM on 5th Nov):</strong><br>
+          Reply <strong>“OK”</strong> or <strong>“NOT OK”</strong>.</li>
+          <li><strong>Name(s) of Presenters</strong> (only those who will present).</li>
+          <li><strong>Mobile Number(s)</strong> of the presenters for session coordination.</li>
+        </ol>
 
-        <p style="font-size: 16px;">If you haven’t yet joined our WhatsApp group, please do so using the link above to receive important event updates and announcements in real-time.</p>
+        <p style="font-size: 16px;">If you reply <strong>“OK”</strong>, the <strong>Test Meeting Link</strong> will be emailed before <strong>11:00 AM</strong> on the same day.</p>
+
+        <p style="font-size: 16px;">Your timely response helps ensure smooth coordination during the presentation session.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
