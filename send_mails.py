@@ -71,7 +71,7 @@ for recipient in recipients:
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
-        <p style="font-size: 16px;">Hello {recipient['name']},</p>
+        <p style="font-size: 16px;">Hello {recipient['resource_person']},</p>
 
         <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
         <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
@@ -87,7 +87,6 @@ for recipient in recipients:
           <tr><td><strong>Day:</strong></td><td>Wednesday</td></tr>
           <tr><td><strong>Time Slot:</strong></td><td>{recipient['time']}</td></tr>
           <tr><td><strong>Topic:</strong></td><td>{recipient['topic']}</td></tr>
-          <tr><td><strong>Presenter(s):</strong></td><td>{recipient['resource_person']}</td></tr>
           <tr><td><strong>Mode:</strong></td><td>Online</td></tr>
           <tr><td><strong>Format:</strong></td><td>12-minute presentation + 1–2 minutes Q&A</td></tr>
         </table>
