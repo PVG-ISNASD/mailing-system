@@ -143,7 +143,7 @@ for recipient in recipients:
     </body>
     </html>
     """
-    print(f"Sending mail to {recipient['name']} ({recipient['email']})...")
+    print(f"Sending mail to {recipient['resource_person']} ({recipient['email']})...")
     this_time = send_email(recipient["email"], subject, body, password, attachment_paths)
     if this_time > 0:
       count += 1
