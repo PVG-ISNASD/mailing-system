@@ -114,7 +114,7 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Thank You for Attending ISNASD’25 – Participation Certificate Attached"
+    subject = "Thank You for Attending ISNASD’25 – Participation Certificate Attached (Test)"
     body = f"""
     <!DOCTYPE html>
     <html>
