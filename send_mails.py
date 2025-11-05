@@ -46,6 +46,8 @@ def generate_certificate(name, template_path):
 
     print(f"✅ Certificate generated for {name}")
     print(f"📄 Output PDF saved at: {final_pdf_path}")
+    return final_pdf_path  # ✅ Return correct path to attach
+
 
 def send_email(recipient, subject, body, password, attachment_paths=None):
   sender = "sustainabilitysymposium@pvgcoet.ac.in"
@@ -83,8 +85,8 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     print(f"An unexpected error occurred while sending to {recipient}: {e}")
     return 0
 
+
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/Certificate.pdf"]
 
 total_time = 0
 count = 0
@@ -160,16 +162,25 @@ for recipient in recipients:
     </body>
     </html>
     """
+
     print(f"Sending mail to {recipient['name']} ({recipient['email']})...")
-    generate_certificate(recipient['name'], certificatePath)
-    this_time = send_email(recipient["email"], subject, body, password, attachment_paths)
+
+    # ✅ Generate certificate and attach *correct* PDF path
+    pdf_path = generate_certificate(recipient['name'], certificatePath)
+    this_time = send_email(recipient["email"], subject, body, password, [pdf_path])
+
     if this_time > 0:
       count += 1
       total_time += this_time
+
   except Exception as e:
     print(f"Failed to send mail to {recipient}: {e}")
 
 print("Total IDs in the list:", len(recipients))
 print("Total mails sent:", count)
 print(f"Total time taken: {total_time:.2f} seconds")
-print(f"Average time taken per mail: {total_time / count} seconds")
+
+if count > 0:
+  print(f"Average time taken per mail: {total_time / count} seconds")
+else:
+  print("No emails were sent successfully.")
