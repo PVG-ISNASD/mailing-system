@@ -9,6 +9,7 @@ import time
 import json
 from pptx import Presentation
 import subprocess
+import glob
 from tempfile import NamedTemporaryFile
 
 def generate_certificate(name, template_path):
