@@ -7,7 +7,32 @@ from email.utils import formataddr
 import os
 import time
 import json
+from pptx import Presentation
+import subprocess
 
+def generate_certificate(name, template_path, output_dir):
+    prs = Presentation(template_path)
+
+    # Replace placeholder text
+    for slide in prs.slides:
+        for shape in slide.shapes:
+            if shape.has_text_frame:
+                if "<<NAME>>" in shape.text:
+                    shape.text = shape.text.replace("<<NAME>>", name)
+
+    # Save modified PPTX
+    pptx_output_path = os.path.join(output_dir, f"{name}.pptx")
+    prs.save(pptx_output_path)
+
+    # Convert PPTX → PDF using LibreOffice
+    subprocess.run([
+        "soffice", "--headless", "--convert-to", "pdf",
+        "--outdir", output_dir, pptx_output_path
+    ], check=True)
+
+    print(f"✅ Certificate generated for {name}")
+    print(f"• PPTX: {pptx_output_path}")
+    print(f"• PDF : {os.path.join(output_dir, f'Certificate.pdf')}")
 
 def send_email(recipient, subject, body, password, attachment_paths=None):
   sender = "sustainabilitysymposium@pvgcoet.ac.in"
@@ -52,7 +77,10 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+)
+certificatePath = os.path.abspath(
+  os.path.join(os.path.dirname(__file__), 'attachment', 'Certificate.pptx')
 )
 
 with open(filepath, 'r') as list:
@@ -60,14 +88,13 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Your ISNASD’25 Registration Number & Event Details"
-
+    subject = "Thank You for Attending ISNASD’25 – Participation Certificate Attached"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Your ISNASD’25 Registration Number</title>
+      <title>Thank You for Attending ISNASD’25 Sessions</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -79,35 +106,16 @@ for recipient in recipients:
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Registration Number Message -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🎟️ Your ISNASD’25 Registration Number</h3>
+        <!-- Thank You Message -->
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🙏 Thank You for Attending ISNASD’25 Sessions</h3>
 
-        <p style="font-size: 16px;">We are delighted to confirm your registration for <strong>ISNASD’25</strong>.</p>
+        <p style="font-size: 16px;">We sincerely thank you for attending and actively participating in the symposium sessions.</p>
 
-        <p style="font-size: 16px;">
-          Your unique registration number is:<br>
-          <span style="display: inline-block; font-size: 20px; color: #ffffff; background-color: #2E8B57; padding: 10px 20px; border-radius: 6px; font-weight: bold;">
-            {recipient['registration_no']}
-          </span>
-        </p>
+        <p style="font-size: 16px;">Your presence and engagement played an important role in making the discussions meaningful and enriching.</p>
 
-        <p style="font-size: 16px;">Please <strong>save this registration number carefully</strong> — it will be required for verification and communication throughout the symposium.  
-        You may take a <strong>screenshot</strong> of this email or <strong>star it</strong> in your inbox to keep it handy.</p>
+        <p style="font-size: 16px;"><strong>Your Participation Certificate has been attached with this email.</strong></p>
 
-        <p style="font-size: 16px;">The symposium is scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>, and we look forward to your enthusiastic participation.</p>
-
-        <p style="font-size: 16px;">We’ve also attached the <strong>Event Flyer</strong> containing important details about the event.</p>
-
-        <!-- WhatsApp Group -->
-        <p style="font-size: 16px;">
-          <a href="https://chat.whatsapp.com/LvNfxZanwZC4D6Z0ZPozrA?mode=wwt" 
-            target="_blank" 
-            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group
-          </a>
-        </p>
-
-        <p style="font-size: 16px;">If you haven’t yet joined our WhatsApp group, please do so using the link above to receive important event updates and announcements in real-time.</p>
+        <p style="font-size: 16px;">Please download and save it for your academic and professional records.</p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
@@ -140,6 +148,7 @@ for recipient in recipients:
     </html>
     """
     print(f"Sending mail to {recipient['name']} ({recipient['email']})...")
+    generate_certificate(recipient['name'], certificatePath, "./attachment")
     this_time = send_email(recipient["email"], subject, body, password, attachment_paths)
     if this_time > 0:
       count += 1
