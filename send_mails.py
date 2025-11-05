@@ -35,18 +35,25 @@ def generate_certificate(name, template_path):
         "--outdir", output_dir, temp_pptx_path
     ], check=True)
 
-    # Rename the generated PDF to Certificate.pdf
-    temp_pdf_path = temp_pptx_path.replace(".pptx", ".pdf")
+    # ✅ Find whichever PDF LibreOffice created
+    pdf_candidates = glob.glob(os.path.join(output_dir, "*.pdf"))
+    if not pdf_candidates:
+        raise FileNotFoundError("❌ PDF was not generated. LibreOffice conversion failed.")
+
+    # Pick the most recently created PDF
+    pdf_candidates.sort(key=os.path.getmtime, reverse=True)
+    generated_pdf_path = pdf_candidates[0]
+
+    # Rename to Certificate.pdf
     final_pdf_path = os.path.join(output_dir, "Certificate.pdf")
-    if os.path.exists(temp_pdf_path):
-        os.replace(temp_pdf_path, final_pdf_path)
+    os.replace(generated_pdf_path, final_pdf_path)
 
     # Remove temporary PPTX file
     os.remove(temp_pptx_path)
 
     print(f"✅ Certificate generated for {name}")
     print(f"📄 Output PDF saved at: {final_pdf_path}")
-    return final_pdf_path  # ✅ Return correct path to attach
+    return final_pdf_path
 
 
 def send_email(recipient, subject, body, password, attachment_paths=None):
