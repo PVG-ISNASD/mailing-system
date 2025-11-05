@@ -9,30 +9,43 @@ import time
 import json
 from pptx import Presentation
 import subprocess
+from tempfile import NamedTemporaryFile
 
-def generate_certificate(name, template_path, output_dir):
+def generate_certificate(name, template_path):
+    # Determine directory of the template
+    output_dir = os.path.dirname(os.path.abspath(template_path))
+
+    # Load template (original stays unchanged)
     prs = Presentation(template_path)
 
-    # Replace placeholder text
+    # Replace placeholder
     for slide in prs.slides:
         for shape in slide.shapes:
-            if shape.has_text_frame:
-                if "<<NAME>>" in shape.text:
-                    shape.text = shape.text.replace("<<NAME>>", name)
+            if shape.has_text_frame and "<<NAME>>" in shape.text:
+                shape.text = shape.text.replace("<<NAME>>", name)
 
-    # Save modified PPTX
-    pptx_output_path = os.path.join(output_dir, f"{name}.pptx")
-    prs.save(pptx_output_path)
+    # Create a temporary PPTX (just for conversion)
+    with NamedTemporaryFile(delete=False, suffix=".pptx") as tmp:
+        temp_pptx_path = tmp.name
+        prs.save(temp_pptx_path)
 
     # Convert PPTX → PDF using LibreOffice
     subprocess.run([
         "soffice", "--headless", "--convert-to", "pdf",
-        "--outdir", output_dir, pptx_output_path
+        "--outdir", output_dir, temp_pptx_path
     ], check=True)
 
+    # Rename the generated PDF to Certificate.pdf
+    temp_pdf_path = temp_pptx_path.replace(".pptx", ".pdf")
+    final_pdf_path = os.path.join(output_dir, "Certificate.pdf")
+    if os.path.exists(temp_pdf_path):
+        os.replace(temp_pdf_path, final_pdf_path)
+
+    # Remove temporary PPTX file
+    os.remove(temp_pptx_path)
+
     print(f"✅ Certificate generated for {name}")
-    print(f"• PPTX: {pptx_output_path}")
-    print(f"• PDF : {os.path.join(output_dir, f'Certificate.pdf')}")
+    print(f"📄 Output PDF saved at: {final_pdf_path}")
 
 def send_email(recipient, subject, body, password, attachment_paths=None):
   sender = "sustainabilitysymposium@pvgcoet.ac.in"
@@ -148,7 +161,7 @@ for recipient in recipients:
     </html>
     """
     print(f"Sending mail to {recipient['name']} ({recipient['email']})...")
-    generate_certificate(recipient['name'], certificatePath, "./attachment")
+    generate_certificate(recipient['name'], certificatePath)
     this_time = send_email(recipient["email"], subject, body, password, attachment_paths)
     if this_time > 0:
       count += 1
