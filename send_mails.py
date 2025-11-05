@@ -22,8 +22,11 @@ def generate_certificate(name, template_path):
     # Replace placeholder
     for slide in prs.slides:
         for shape in slide.shapes:
-            if shape.has_text_frame and "<<NAME>>" in shape.text:
-                shape.text = shape.text.replace("<<NAME>>", name)
+            if shape.has_text_frame:
+                for paragraph in shape.text_frame.paragraphs:
+                    for run in paragraph.runs:
+                        if "<<NAME>>" in run.text:
+                            run.text = run.text.replace("<<NAME>>", name)
 
     # Create a temporary PPTX (just for conversion)
     with NamedTemporaryFile(delete=False, suffix=".pptx") as tmp:
