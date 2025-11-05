@@ -16,6 +16,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install PPTX library
+        run: pip install python-pptx
+        
       - name: Run Send Email Script
         run: python send_mails.py
         env:
