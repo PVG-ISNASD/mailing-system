@@ -46,13 +46,12 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/ISNASD'25_FLYER.pdf", "./attachment/Paper_format.png"]
 
 total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,63 +59,43 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "📢 Final Call for Paper Submission – ISNASD’25 (Sustainability Symposium)"
+    subject = "ISNASD’25 – Your Official Certificate"
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Final Call for Paper Submission – ISNASD’25</title>
+      <title>Your ISNASD’25 Certificate</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         
         <p style="font-size: 16px;">Hello {recipient['name']},</p>
 
-        <p style="font-size: 16px;">Greetings from the Organizing Committee of the 
-        <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>, 
-        organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
-        affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
-
-        <!-- Final Call Message -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">📢 Final Call for Paper Submission</h3>
-
-        <p style="font-size: 16px;">We sincerely thank you for submitting your <strong>abstract</strong> titled 
-        <em>“{recipient['topic']}”</em> earlier under ISNASD’25.</p>
-
-        <p style="font-size: 16px;">As per our records, we have not yet received your <strong>final paper</strong>. 
-        Although the deadline for final paper submission has already passed, the Organizing Committee is providing 
-        a <strong>final opportunity</strong> for authors to complete their submission.</p>
-
-        <p style="font-size: 16px;">You are kindly requested to send your <strong>final paper (PDF or Word format)</strong> 
-        at the earliest by replying to this email. Submissions received promptly will still be considered for inclusion 
-        in the proceedings and presentation schedule.</p>
-
-        <p style="font-size: 16px;">The symposium is scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>. 
-        We would be delighted to have your active participation in this academic event.</p>
-
-        <p style="font-size: 16px;">For your convenience, we have attached the following:</p>
-        <ul style="font-size: 16px;">
-          <li><strong>Paper Format</strong> – to prepare your final paper</li>
-          <li><strong>Speakers Flyer</strong> – featuring our distinguished speakers</li>
-        </ul>
-
-        <p style="font-size: 16px;">We truly value your contribution and encourage you to submit your final paper at the earliest possible.</p>
-
-        <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
-          <a href="https://chat.whatsapp.com/KLZyOua6T0p5L7RA2nP0yJ?mode=ems_wa_t" 
-            target="_blank" 
-            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group
-          </a>
+          Greetings from the Organizing Committee of the 
+          <strong>International Symposium on “Niche Areas of Sustainable Development” (ISNASD’25)</strong>,
+          hosted by <strong>PVG’s COET&M, Pune-9</strong> and affiliated to 
+          <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.
         </p>
 
-        <p style="font-size: 16px;">If you have not yet joined the WhatsApp group, please do so using the above link to receive important symposium updates.</p>
+        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🎉 Your Certificate is Attached</h3>
 
-        <p style="font-size: 16px; text-align: center;">Warm Regards</p>
+        <p style="font-size: 16px;">
+          We are pleased to share your official <strong>ISNASD’25 certificate</strong>.  
+          Please find the attached PDF for your records.
+        </p>
 
-        <table style="width: 100%; font-size: 16px;">
+        <p style="font-size: 16px;">
+          We sincerely appreciate your participation and contribution to ISNASD’25.  
+          Thank you for being a part of this academic initiative, and we look forward to 
+          your involvement in future events as well.
+        </p>
+
+        <p style="font-size: 16px;">Warm Regards,</p>
+
+        <!-- Principal & Convenor -->
+        <table style="width: 100%; font-size: 16px; margin-top: 10px;">
           <tr>
             <td style="text-align: left; vertical-align: top;">
               <strong>Prof. Archana Mirashi</strong><br>
@@ -131,21 +110,26 @@ for recipient in recipients:
 
         <hr style="border: none; border-top: 1px solid #ccc; margin: 30px 0;">
 
+        <!-- Contact Information -->
         <div style="border-left: 4px solid #2E8B57; padding-left: 16px; background-color: #f2fdf2; padding: 10px 16px; font-size: 15px;">
           <p><strong>📩 For queries, please contact:</strong></p>
-          <p>📧 <a href="mailto:sustainabilitysymposium@pvgcoet.ac.in">sustainabilitysymposium@pvgcoet.ac.in</a><br>
+          <p>
+            📧 <a href="mailto:sustainabilitysymposium@pvgcoet.ac.in">sustainabilitysymposium@pvgcoet.ac.in</a><br>
             👨‍🏫 Faculty Coordinators: 98230 48494 | 82089 92812<br>
             👩‍🎓 Student Coordinator: 78430 08499 | 90960 82640
           </p>
         </div>
 
-        <p style="font-size: 14px; margin-top: 40px; color: #555;">On behalf of the Student Organizing Committee @ ISNASD’25</p>
+        <p style="font-size: 14px; margin-top: 40px; color: #555;">
+          On behalf of the Student Organizing Committee @ ISNASD’25
+        </p>
+
       </div>
     </body>
     </html>
     """
     print(f"Sending mail to {recipient['name']} ({recipient['email']})...")
-    this_time = send_email(recipient["email"], subject, body, password, attachment_paths)
+    this_time = send_email(recipient["email"], subject, body, password, [f"./attachment/{recipient['name']}.pdf"])
     if this_time > 0:
       count += 1
       total_time += this_time
