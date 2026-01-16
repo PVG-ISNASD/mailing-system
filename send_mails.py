@@ -46,13 +46,13 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     return 0
 
 password = os.environ.get("EMAIL_PASSWORD")
-attachment_paths = ["./attachment/ISNASD'25_FLYER.pdf"]
+attachment_paths = []
 
 total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
 )
 
 with open(filepath, 'r') as list:
