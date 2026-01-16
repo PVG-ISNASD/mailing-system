@@ -52,7 +52,7 @@ total_time = 0
 count = 0
 
 filepath = os.path.abspath(
-  os.path.join(os.path.dirname(__file__), 'data', 'recipients.json')
+  os.path.join(os.path.dirname(__file__), 'data', 'internal_team.json')
 )
 
 with open(filepath, 'r') as list:
@@ -60,13 +60,14 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "🎉 Paper Selected for Presentation – ISNASD’25 (Sustainability Symposium)"
+    subject = "⚠️ Important Update Regarding Paper Publication – ISNASD’25"
+
     body = f"""
     <!DOCTYPE html>
     <html>
     <head>
       <meta charset="UTF-8">
-      <title>Paper Selected for Presentation – ISNASD’25</title>
+      <title>Important Update – ISNASD’25</title>
     </head>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; margin: 0; padding: 0;">
       <div style="max-width: 700px; margin: 30px auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
@@ -78,29 +79,29 @@ for recipient in recipients:
         organized by <strong>Pune Vidyarthi Griha’s College of Engineering, Technology and Management, Pune-9</strong>, 
         affiliated to <strong>Savitribai Phule Pune University, Maharashtra, India</strong>.</p>
 
-        <!-- Paper Selection Announcement -->
-        <h3 style="color: #2E8B57; font-weight: 700; font-size: 18px;">🎉 Congratulations! Your Paper Has Been Selected for Presentation</h3>
+        <h3 style="color: #B22222; font-weight: 700; font-size: 18px;">
+          ⚠️ Important Update Regarding Paper Publication
+        </h3>
 
-        <p style="font-size: 16px;">We are pleased to inform you that your paper titled 
-        <strong>“{recipient['topic']}”</strong> has been <strong>selected for presentation</strong> at the 
-        <strong>ISNASD’25 Symposium</strong> scheduled on <strong>3<sup>rd</sup>, 4<sup>th</sup> and 5<sup>th</sup> November 2025</strong>.</p>
-
-        <p style="font-size: 16px;">Hearty congratulations to you and your co-authors! We look forward to your active participation and valuable insights during the symposium sessions.</p>
-
-        <p style="font-size: 16px;">Please find attached the <strong>Event Flyer</strong> for more information about ISNASD’25.</p>
-
-        <!-- WhatsApp Group -->
         <p style="font-size: 16px;">
-          <a href="https://chat.whatsapp.com/KLZyOua6T0p5L7RA2nP0yJ?mode=ems_wa_t" 
-            target="_blank" 
-            style="background-color: #2E8B57; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">
-            👉 Join WhatsApp Group for Presenters
-          </a>
+          We sincerely apologize for the inconvenience caused due to unforeseen issues with the publisher initially shortlisted for the symposium publication. We understand the importance of timely, credible, and legitimate publication of your valuable research work.
         </p>
 
-        <p style="font-size: 16px;">If you’ve not yet joined the group, kindly do so to receive presentation schedule updates, technical instructions, and other important announcements.</p>
+        <p style="font-size: 16px;">
+          Unfortunately, due to a shortfall in meeting the publisher’s minimum requirement of fifteen (15) research papers, along with concerns regarding the publisher’s authenticity, we are unable to proceed with the originally planned publication arrangement.
+        </p>
 
-        <p style="font-size: 16px;">Once again, congratulations, and we look forward to hosting you at ISNASD’25!</p>
+        <p style="font-size: 16px;">
+          Under these circumstances, we kindly request each author to take responsibility for publishing their respective research paper independently in a journal of their choice, ensuring that the selected journal meets appropriate academic and quality standards.
+        </p>
+
+        <p style="font-size: 16px;">
+          We deeply regret any delay or discomfort this situation may have caused and truly appreciate your patience, understanding, and cooperation. Please be assured that this decision has been taken in the best interest of maintaining the integrity and quality of research publications.
+        </p>
+
+        <p style="font-size: 16px;">
+          We sincerely apologize once again for the inconvenience and thank you for your continued support.
+        </p>
 
         <p style="font-size: 16px; text-align: center;">Warm Regards</p>
 
@@ -121,13 +122,16 @@ for recipient in recipients:
 
         <div style="border-left: 4px solid #2E8B57; padding-left: 16px; background-color: #f2fdf2; padding: 10px 16px; font-size: 15px;">
           <p><strong>📩 For queries, please contact:</strong></p>
-          <p>📧 <a href="mailto:sustainabilitysymposium@pvgcoet.ac.in">sustainabilitysymposium@pvgcoet.ac.in</a><br>
+          <p>
+            📧 <a href="mailto:sustainabilitysymposium@pvgcoet.ac.in">sustainabilitysymposium@pvgcoet.ac.in</a><br>
             👨‍🏫 Faculty Coordinators: 98230 48494 | 82089 92812<br>
             👩‍🎓 Student Coordinator: 78430 08499 | 90960 82640
           </p>
         </div>
 
-        <p style="font-size: 14px; margin-top: 40px; color: #555;">On behalf of the Student Organizing Committee @ ISNASD’25</p>
+        <p style="font-size: 14px; margin-top: 40px; color: #555;">
+          On behalf of the Student Organizing Committee @ ISNASD’25
+        </p>
       </div>
     </body>
     </html>
