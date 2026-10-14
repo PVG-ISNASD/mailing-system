@@ -20,7 +20,7 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     message['Subject'] = subject
     message.attach(MIMEText(body, 'html'))
 
-  if attachment_paths:
+    if attachment_paths:
     for attachment_path in attachment_paths:
       with open(attachment_path, "rb") as attachment:
         part = MIMEBase("application", "octet-stream")
@@ -31,8 +31,8 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
           f"attachment; filename={os.path.basename(attachment_path)}",
         )
         message.attach(part)
-
-  try:
+    
+    try:
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp_server:
       smtp_server.starttls()
       smtp_server.login(sender, password)
@@ -41,7 +41,7 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
     elapsed_time = end_time - start_time
     print(f"Mail sent to {recipient} in {elapsed_time:.2f} seconds.")
     return elapsed_time
-  except Exception as e:
+    except Exception as e:
     print(f"An unexpected error occurred while sending to {recipient}: {e}")
     return 0
 
