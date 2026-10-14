@@ -11,7 +11,7 @@ import json
 
 def send_email(recipient, subject, body, password, attachment_paths=None):
     sender = "sustainabilitysymposium@pvgcoet.ac.in"
-    display_name = "ISNASD’25 Team"
+    display_name = "ISNASD’26 Team"
     
     start_time = time.time()
     message = MIMEMultipart()
@@ -60,7 +60,7 @@ with open(filepath, 'r') as list:
 
 for recipient in recipients:
   try:
-    subject = "Invitation to Participate in ISNASD’25 – International Symposium on Niche Areas of Sustainable Development"
+    subject = "Invitation to Participate in ISNASD’25 – International Symposium on Niche Areas of Sustainable Development (TEST)"
     body = f"""
     <!DOCTYPE html>
     <html>
