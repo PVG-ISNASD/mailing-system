@@ -59,7 +59,7 @@ def send_email(recipient, subject, body, password, attachment_paths=None):
 password = os.environ.get("EMAIL_PASSWORD")
 
 # Update this path if your flyer has a different filename.
-attachment_paths = ["./attachment/ISNASD'26-Flyer.pdf"]
+attachment_paths = ["./Event flyer.jpeg", "./About the event.jpeg"]
 
 total_time = 0
 count = 0
