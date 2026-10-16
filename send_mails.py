@@ -116,15 +116,6 @@ for recipient in recipients:
             </p>
 
             <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">
-              📢 Call for Papers
-            </h3>
-
-            <p style="font-size: 16px;">
-              We invite original research papers, case studies, and review
-              articles on a wide range of sustainability-related themes.
-            </p>
-
-            <h3 style="color: #d32f2f; font-weight: 700; font-size: 18px;">
               ‼️ Event Highlights
             </h3>
 
